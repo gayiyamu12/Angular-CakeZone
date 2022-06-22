@@ -1,0 +1,60 @@
+<div class="card product-list">
+  <img [src]="productItem.imageUrl" alt="cake-image" height="300" />
+
+  <div class="card-body">
+    <h4 class="name">{{ productItem.name }}</h4>
+    <p class="card-text description">
+      {{ productItem.description }}
+    </p>
+    <p class="show-info-link" (click)="onClick()">
+      <a
+        data-bs-toggle="collapse"
+        href="#toggle-info_{{ index }}"
+        role="button"
+        aria-expanded="false"
+        aria-controls="toggle-info"
+      >
+        <i *ngIf="isActive" class="fa fa-angle-up"></i>
+        <i *ngIf="!isActive" class="fa fa-angle-down"></i>See Information
+      </a>
+    </p>
+    <div class="show-info-toggle">
+      <div class="collapse" id="toggle-info_{{ index }}">
+        <div class="show-info-item">
+          <i class="fa fa-truck"></i>Delivery by Tomorrow
+        </div>
+        <div class="show-info-item">
+          <i class="fa fa-users"></i>Serves 4-6 People
+        </div>
+        <div class="show-info-item">
+          <i class="fa fa-circle"></i>Round Shape
+        </div>
+      </div>
+    </div>
+
+    <div class="price">
+      <div *ngIf="productItem.discountedPrice > 0">
+        <span class="offer-price">{{ productItem.price }}:- </span
+        ><span class="discount-price">
+          <span class="discount-price-strike"
+            >{{ productItem.discountedPrice }}
+          </span>
+        </span>
+      </div>
+      <div *ngIf="productItem.discountedPrice == 0">
+        <span class="no-offer-price">{{ productItem.price }}:- </span>
+      </div>
+    </div>
+    <div class="text-center">
+      <div class="btn-group">
+        <button
+          (click)="handleAddToCart()"
+          type="button"
+          class="btn btn-sm btn-outline-secondary"
+        >
+          Add to list
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="cart">
+  <h3>Wishlist</h3>
+  <div *ngIf="cartItems.length === 0">Your cart is empty</div>
+
+  <div *ngIf="cartItems.length > 0">
+    <div *ngFor="let items of cartItems">
+      <app-cart-item [cartItem]="items"></app-cart-item>
+    </div>
+    <div>
+      <h2>Total Price: {{ cartTotal }} :-</h2>
+    </div>
+  </div>
+</div>
