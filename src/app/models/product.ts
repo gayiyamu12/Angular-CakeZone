@@ -3,7 +3,7 @@ export class Product {
   imageUrl: string;
   description: string;
   price: number;
-  discountedPrice: number;
+  discountedPrice?: number;
 
   constructor(
     name: string,

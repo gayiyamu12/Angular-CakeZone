@@ -6,7 +6,7 @@ export const products = [
     description:
       'This cake is delicious cross between chocolate and vanilla with maroon color',
     price: 569,
-    discountedPrice: 120,
+    discountedPrice: 700,
   },
   {
     name: 'Blueberry Cake',
@@ -14,15 +14,16 @@ export const products = [
     description:
       'Our classic vanilla cake with the addition of fresh strawberry puree',
     price: 459,
-    discountedPrice: 120,
+    discountedPrice: 650,
   },
   {
     name: 'Vanilla Cake',
     imageUrl:
       'https://preview.redd.it/9hynzpw120071.jpg?width=640&crop=smart&auto=webp&s=c22eb6965e11a184e33710ee27eae04cdd21cff1',
-    description: 'A moist vanilla cake made with Madagascar vanilla extract',
+    description:
+      'A moist vanilla cake made with Madagascar vanilla extract with fresh cream',
     price: 1569,
-    discountedPrice: 120,
+    discountedPrice: 2100,
   },
   {
     name: 'Orange Cake',

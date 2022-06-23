@@ -1,1 +1,3 @@
-<div class="cart-item">{{ cartItem.name }}:&nbsp;{{ cartItem.price }}</div>
+<div class="cart-item">
+  {{ cartItem.name }}:&nbsp;{{ cartItem.price | currency: "SEK" }}
+</div>
